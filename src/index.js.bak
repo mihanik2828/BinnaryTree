@@ -1,0 +1,25 @@
+"use strict";
+
+var duck_js_1 = require("./Node.js");
+var fish_js_1 = require("./Node.js");
+var readlineSync = require("readline-sync");
+var fish = new fish_js_1.Node();
+var duck = new duck_js_1.Node();
+function doSwim(fishArg) {
+    fishArg.swim();
+}
+doSwim(fish);
+doSwim(duck);
+doSwim({
+    swim: function () {
+        console.log("ololo");
+    }
+});
+function f(id) {
+    if (typeof id == "string") {
+        id.split(",");
+    }
+}
+readlineSync.question('Which program starts do you want? ', {
+    defaultInput: 'firefox'
+});
